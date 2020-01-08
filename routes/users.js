@@ -16,7 +16,7 @@ router.post(
       .not()
       .isEmpty(),
     check('email', 'Please enter a valid email').isEmail(),
-    check('password', 'Password must be 8 characters long').isLength({ min: 6 })
+    check('password', 'Password must be 8 characters long').isLength({ min: 8 })
   ],
   async (req, res) => {
     const errors = validationResult(req);
