@@ -3,12 +3,12 @@ import ContactContext from '../../context/contact/contactContext';
 
 const ContactItem = ({ contact }) => {
   const contactContext = useContext(ContactContext);
-  const { id, name, email, type, phone } = contact;
+  const { _id, name, email, type, phone } = contact;
 
   const { deleteContact, setCurrent, clearCurrent } = contactContext;
   const onDelete = () => {
     clearCurrent();
-    deleteContact(id);
+    deleteContact(_id);
   };
   return (
     <div className=" card bg-light">
